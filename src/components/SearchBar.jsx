@@ -14,7 +14,7 @@ const SearchBar = ( { searchText , setSearchText , setButtonClicked, buttonClick
               className='search-bar'
               value={searchText}
               onChange={ (e) => setSearchText(e.target.value) } 
-              onKeyDown = {(key) => key.code === 'Enter'}
+              onKeyDown = {(key) => key.code === 'Enter' && setButtonClicked(true)}
           />
           <div className='icon' onClick={() => setButtonClicked(true)}>
             <img 

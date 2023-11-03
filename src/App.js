@@ -10,6 +10,7 @@ function App() {
 
   const [searchText, setSearchText] = useState("");
   const [buttonClicked, setButtonClicked] = useState(false);
+  const [clear , setClear ] = useState(false);
 
   return (
     <div className="App">
@@ -25,10 +26,16 @@ function App() {
           <div className=''>
             <DisplayBox 
               searchText={searchText}
+              setSearchText={setSearchText}
               buttonClicked={buttonClicked}
               setButtonClicked={setButtonClicked}
+              clear={clear}
+              setClear={setClear}
             />
-            <ClearButton />
+            <ClearButton 
+              clear={clear}
+              setClear={setClear}
+            />
           </div>
         </div>
       </div>

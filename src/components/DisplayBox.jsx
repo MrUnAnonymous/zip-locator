@@ -1,62 +1,93 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
-const DisplayBox = ( { searchText , buttonClicked, setButtonClicked }) => {
+const DisplayBox = ( { searchText , buttonClicked, setButtonClicked , clear , setClear, setSearchText }) => {
+  const [placeDetails, setPlaceDetails] = useState({
+    postalCode: "",
+    country: "",
+    state: "",
+    place: ""
+  });
+
+  console.log(clear)
+
+  useEffect(() => {   
+    if(clear){
+      setSearchText("")
+      setPlaceDetails({
+        postalCode: "",
+        country: "",
+        state: "",
+        place: ""
+      });
+    }
+  }, [clear])
+
   const data = async() => {
     try {
-      const element = searchText
-      console.log("ELEMENT" ,element)
+        setPlaceDetails({
+          postalCode: "",
+          country: "",
+          state: "",
+          place: ""
+        });
+        if (searchText[0].value === "") {
+          return 0;
+        }
+  
+        let url = `http://api.zippopotam.us/in/${searchText}`;
+        let response = await fetch(url);
+        let responseData = await response.json();
+        console.log(responseData);
+        
+        if(responseData){
+          setPlaceDetails({
+            postalCode: searchText,
+            country: responseData.country,
+            state: responseData.places[0].state,
+            place: responseData.places[0]["place name"]
+          })
+        }
+        if (responseData) {
+          setButtonClicked(false);
+          setClear(false);
+        }
       
-      if (element[0].value === ""){
-        return 0;
-      } 
-      
-      let url = `http://api.zippopotam.us/in/${element}`
-      let response = await fetch(url);
-      let responseData = await response.json();
-      console.log(responseData);
-
-      const postalCode = document.getElementsByClassName("info-pc");
-      const country = document.getElementsByClassName("info-cntry");
-      const state = document.getElementsByClassName("info-state");
-      const place = document.getElementsByClassName("info-place");
-
-      postalCode[0].innerHTML = searchText;
-      country[0].innerHTML = responseData.country;
-      state[0].innerHTML = responseData.places[0].state;
-      place[0].innerHTML = responseData.places[0].placename;
-
-      if(data){
-        setButtonClicked(false);
-      }
-
+  
     } catch (error) {
       toast.error("Incorrect Pincode.");
     }
   }
 
-  if ( buttonClicked === true ) {
-    console.log("BUTTON-->>>")
-    data();
-  }
+  useEffect( () => {
+    if ( buttonClicked === true ) {
+      console.log("BUTTON-->>>")
+      data();
+    }
+  }, [ buttonClicked ] ) 
+
+  useEffect( () => {
+      data();
+  }, []);
+
   return (
     <div className='display-container'>
       <div className='data'>
         <div className='content'>
           <h4 className='label'>Postal Code: </h4>
-          <p className='info-pc'></p>
+          <p className='info-pc'>{placeDetails?.postalCode}</p>
         </div>
         <div className='content'>
           <h4 className='label'>Country: </h4>
-          <p className='info-cntry'></p>
+          <p className='info-cntry'>{placeDetails?.country}</p>
         </div>
         <div className='content'>
           <h4 className='label'>State: </h4>
-          <p className='info-state'></p>
+          <p className='info-state'>{placeDetails?.state}</p>
         </div>
         <div className='content'>
           <h4 className='label'>Place: </h4>
-          <p className='info-place'></p>
+          <p className='info-place'>{placeDetails?.place}</p>
         </div>
       </div>
     </div>
