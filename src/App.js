@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles.css'
+import SearchBar from './components/SearchBar';
+import DisplayBox from './components/DisplayBox';
+import ClearButton from './components/ClearButton';
+import { Toaster } from 'react-hot-toast';
+import { useState } from 'react';
 
 function App() {
+
+  const [searchText, setSearchText] = useState("");
+  const [buttonClicked, setButtonClicked] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div  className='main-container'>
+        <div className='card'>
+          <Toaster />
+          <SearchBar 
+            searchText={searchText} 
+            setSearchText={setSearchText}
+            buttonClicked={buttonClicked}
+            setButtonClicked={setButtonClicked}
+          />
+          <div className=''>
+            <DisplayBox 
+              searchText={searchText}
+              buttonClicked={buttonClicked}
+              setButtonClicked={setButtonClicked}
+            />
+            <ClearButton />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
