@@ -1,5 +1,5 @@
 .main-container{
-    background-image: url('https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?auto=format&fit=crop&q=80&w=1472&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-color: #D0A2F7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,12 +7,27 @@
     height: 100vh;
   }
 
+.bg-image{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
   .card{
     display: flex;
     flex-direction: column;
     width: 30vw;
     height: 80vh;
-    border-radius: 16px;
-    background-color: #FFE569AA;
+    border-radius: 20px;
     margin: 75px;
+    z-index: 5;
+    background: rgba( 0, 169, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
