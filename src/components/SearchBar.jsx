@@ -19,7 +19,8 @@ const SearchBar = ( { searchText , setSearchText , setButtonClicked, buttonClick
           <div className='icon' onClick={() => setButtonClicked(true)}>
             <img 
               src={search_icons} 
-              alt="Search Icon" 
+              alt="Search Icon"
+              className= "searchIcon"
             />
           </div>
       </div>

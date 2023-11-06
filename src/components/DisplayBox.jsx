@@ -25,15 +25,15 @@ const DisplayBox = ( { searchText , buttonClicked, setButtonClicked , clear , se
 
   const data = async() => {
     try {
+      if (searchText[0].value === "") {
+        return 0;
+      }
         setPlaceDetails({
           postalCode: "",
           country: "",
           state: "",
           place: ""
         });
-        if (searchText[0].value === "") {
-          return 0;
-        }
   
         let url = `http://api.zippopotam.us/in/${searchText}`;
         let response = await fetch(url);
@@ -52,10 +52,9 @@ const DisplayBox = ( { searchText , buttonClicked, setButtonClicked , clear , se
           setButtonClicked(false);
           setClear(false);
         }
-      
-  
     } catch (error) {
       toast.error("Incorrect Pincode.");
+      setButtonClicked(false);
     }
   }
 

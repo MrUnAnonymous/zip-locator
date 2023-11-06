@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <div  className='main-container'>
         <img
-          src=  "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&q=60&w=400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bG9jYXRpb258ZW58MHx8MHx8fDA%3D"
+          src="https://plus.unsplash.com/premium_photo-1681433394443-f00c5d39087e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fG1hcHxlbnwwfHwwfHx8MA%3D%3D"
           alt='Background'
           className='bg-image'  
         /> 
