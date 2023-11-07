@@ -13,8 +13,6 @@
 - [Usage](#usage)
 - [API Usage](#api-usage)
 - [Mobile Responsiveness](#mobile-responsiveness)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
