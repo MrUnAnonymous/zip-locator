@@ -25,6 +25,7 @@ This is a ReactJS web application that allows users to enter a zip code and retr
 - Input a zip code and retrieve location details.
 - Display information including country, state, and place.
 - Mobile-responsive design for accessibility on various devices.
+- Clear button to clear all fields whenever you want.
 
 ## Technologies
 
@@ -45,3 +46,21 @@ Before running the application, make sure you have the following installed:
 
    ```bash
    git clone https://github.com/yourusername/your-repo.git
+
+   1 .Navigate to the project directory:
+        cd your-repo
+   2. Install the project dependencies:
+         npm install
+   3. Start the development server:
+         npm start
+   4. Open your web browser and access the application at
+          http://localhost:3000
+   ### Usage
+     - Open the application in your web browser.
+     - Enter a zip code in the input field and press the "Submit" button.
+     - The location details will be displayed on the screen.
+   ### API Usage
+     -This project uses the zippopotam.us API to fetch location details based on zip codes. You can find more information about their API in their documentation.
+
+### Mobile Responsiveness
+    -The application is designed to be mobile-responsive, so you can access it from various devices, including smartphones and tablets.
