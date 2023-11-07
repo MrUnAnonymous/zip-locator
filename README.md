@@ -2,6 +2,9 @@
 
 ![image](https://github.com/MrUnAnonymous/zip-locator/assets/109267565/222d5fcd-943b-467d-93b3-d3abed0df4e5)
 
+### Live Link 
+    https://zip-locator.netlify.app
+
 ## Table of Contents
 
 - [Overview](#overview)
