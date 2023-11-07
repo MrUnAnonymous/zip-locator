@@ -1,4 +1,4 @@
-# Zipcode Location Details Web Application
+# Zipcode Locator Web Application
 
 ![image](https://github.com/MrUnAnonymous/zip-locator/assets/109267565/222d5fcd-943b-467d-93b3-d3abed0df4e5)
 
@@ -46,7 +46,7 @@ Before running the application, make sure you have the following installed:
    git clone https://github.com/MrUnAnonymous/zip-locator.git
 
    1. Navigate to the project directory:
-        cd your-repo
+        cd zip-locator
    2. Install the project dependencies:
          npm install
    3. Start the development server:
