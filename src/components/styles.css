@@ -1,37 +1,33 @@
-.display-container{
+.display-container {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.content{
+    margin: 20px 0;
+  }
+  
+  .content {
     display: flex;
     gap: 10px;
     align-items: center;
-    flex-direction: row;
-}
-
-.data{
+  }
+  
+  .data {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.search{
+  }
+  
+  .search {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 14px;
     padding-top: 30px;
-}
-
-.search input {
-    display: flex;
+  }
+  
+  .search input {
     width: 20vw;
     height: 7vh;
     background: #F1F0E8;
@@ -40,41 +36,37 @@
     border-radius: 40px;
     padding-left: 40px;
     color: #626262;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.search-bar{
+    font: 20px/400 'Courier New', Courier, monospace;
+  }
+  
+  .search-bar {
     width: 250px;
     height: 30px;
     border-radius: 25px;
     margin-right: 10px;
     outline: none;
     border: none;
-    font-family: monospace;
-    font-weight: lighter;
+    font: lighter 15px/1 monospace;
     box-shadow: 5px 5px 5px;
-}
-
-.btn-clear{
+  }
+  
+  .btn-clear {
     width: 100px;
     height: 40px;
     border-radius: 20px;
-    background-color: #A0E9FF;
+    background: #A0E9FF;
     cursor: pointer;
     border: none;
-    font-family: monospace;
-    font-size: 17px;
-}
-
-.btn-clear:hover{
-    background-color: #00A9FF;
+    font: 17px/1 monospace;
+  }
+  
+  .btn-clear:hover {
+    background: #00A9FF;
     box-shadow: 5px 5px 5px;
-}
-
-
-.icon{
-    background-color:whitesmoke;
+  }
+  
+  .icon {
+    background: whitesmoke;
     width: 3vw;
     height: 3vw;
     border-radius: 50px;
@@ -82,47 +74,43 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 1px 1px 10px 0px;
-}
-
-.label{
-    font-weight: 800;
-    font-size: 21px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.info-pc, .info-cntry, .info-state, .info-place{
-    font-weight: 500;
-    font-size: 19px;
-    font-family:'Courier New', Courier, monospace ;
+    box-shadow: 1px 1px 10px 0;
+  }
+  
+  .label {
+    font: 21px/1 Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .info-pc,
+  .info-cntry,
+  .info-state,
+  .info-place {
+    font: 19px/1 'Courier New', Courier, monospace;
     white-space: nowrap;
-}
-
-@media only screen and (max-width: 800px) {
-    .card{
-        width: 80vw;
-        height: 80vh;
-        margin: 10px;
-      }
-    
-    .search input{
-        width: 100%;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .card {
+      width: 80vw;
+      height: 80vh;
+      margin: 10px;
     }
-
-    .search-bar{
-        width: 40vw;
-        height: 5vh;
-        font-size: 14px;
-        font-weight: 400;
+  
+    .search input {
+      width: 100%;
+      width: 50vw;
+      height: 6vh;
     }
-
-    .icon{
-        width: 6vw;
-        height: 6vw;
+  
+    .search-bar {
+      font-size: 14px;
+      font-weight: 600;
     }
-
-    .search-icon{
-        width: 4vw;
-        height: 4vw;
+  
+    .icon,
+    .search-icon {
+      width: 7vw;
+      height: 7vw;
     }
-}
+  }
+  

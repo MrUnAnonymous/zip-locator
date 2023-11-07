@@ -2,8 +2,7 @@ import React from 'react'
 import './styles.css'
 import search_icons from './Assets/search.png'
 
-const SearchBar = ( { searchText , setSearchText , setButtonClicked, buttonClicked } ) => {
-
+const SearchBar = ( { searchText , setSearchText , setButtonClicked, buttonClicked, loading, setLoading } ) => {
 
   return (
     <div className='search-container'>

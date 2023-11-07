@@ -4,10 +4,11 @@ import SearchBar from './components/SearchBar';
 import DisplayBox from './components/DisplayBox';
 import ClearButton from './components/ClearButton';
 import { Toaster } from 'react-hot-toast';
-import { useState } from 'react';
+import { useState } from "react";
+
 
 function App() {
-
+  const [loading, setLoading] = useState(false);  
   const [searchText, setSearchText] = useState("");
   const [buttonClicked, setButtonClicked] = useState(false);
   const [clear , setClear ] = useState(false);
@@ -27,6 +28,8 @@ function App() {
             setSearchText={setSearchText}
             buttonClicked={buttonClicked}
             setButtonClicked={setButtonClicked}
+            loading={loading}
+            setLoading={setLoading}
           />
           <div className=''>
             <DisplayBox 
@@ -36,6 +39,8 @@ function App() {
               setButtonClicked={setButtonClicked}
               clear={clear}
               setClear={setClear}
+              loading={loading}
+              setLoading={setLoading}
             />
             <ClearButton 
               clear={clear}
