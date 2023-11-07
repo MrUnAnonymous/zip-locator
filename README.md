@@ -43,7 +43,7 @@ Before running the application, make sure you have the following installed:
 1. Clone the repository to your local machine:
 
    ```bash
-   [git clone [https://github.com/yourusername/your-repo.git](https://github.com/MrUnAnonymous/zip-locator.git)](https://github.com/MrUnAnonymous/zip-locator.git)
+   git clone https://github.com/MrUnAnonymous/zip-locator.git
 
    1. Navigate to the project directory:
         cd your-repo
